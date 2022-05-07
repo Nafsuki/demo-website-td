@@ -1,0 +1,41 @@
+{
+  "interfacesData": [
+    {
+      "name": "amazon",
+      "path": "/platforms/amazon"
+    },
+    {
+      "name": "ebay",
+      "path": "/platforms/ebay"
+    },
+    {
+      "name": "plentymarkets",
+      "path": "/platforms/plentymarkets"
+    },
+
+    {
+      "name": "jtl",
+      "path": "/platforms/jtl"
+    },
+    {
+      "name": "afterbuy",
+      "path": "/platforms/afterbuy"
+    },
+    {
+      "name": "shopify",
+      "path": "/platforms/shopify"
+    },
+    {
+      "name": "billbee",
+      "path": "/platforms/billbee"
+    },
+    {
+      "name": "c-discount",
+      "path": "/platforms/cdiscount"
+    },
+    {
+      "name": "prestashop",
+      "path": "/platforms/prestashop"
+    }
+  ]
+}
