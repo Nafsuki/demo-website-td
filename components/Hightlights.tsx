@@ -14,7 +14,9 @@ const Hightlights = () => {
   return (
     <div className="w-full px-3 mx-auto my-20 max-w-7xl md:px-8 xl:px-0">
       <div className="p-10 shadow-2xl">
-        <h3 className="mb-16 text-2xl font-bold text-center">Highlights:</h3>
+        <h3 className="mb-16 text-2xl font-bold text-center lg:text-3xl">
+          Highlights:
+        </h3>
         <div className="md:grid md:grid-cols-2 md:gap-3">
           {highlights.map((highlight, index) => (
             <div

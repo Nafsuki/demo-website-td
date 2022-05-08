@@ -13,7 +13,11 @@ import {
 } from '../data'
 
 const Navbar = () => {
-  const [isClicked, setIsClicked] = useState(false)
+  const [isFlagClicked, setIsFlagClicked] = useState(false)
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+  const [isFeatureClicked, setIsFeatureClicked] = useState(false)
+  const [isInterfacesClicked, setIsInterfacesClicked] = useState(false)
+  const [isMobileLanguageClicked, setIsMobileLanguageClicked] = useState(false)
   return (
     <div className="fixed z-40 w-full">
       {/* Sub Navbar on Top */}
@@ -27,7 +31,11 @@ const Navbar = () => {
                 </a>
               </Link>
             ))}
-            <div className="flex" onClick={() => setIsClicked(!isClicked)}>
+            {/* Language Choices */}
+            <div
+              className="flex"
+              onClick={() => setIsFlagClicked(!isFlagClicked)}
+            >
               <Link href="/" locale="en" passHref>
                 <a className="flex items-center">
                   <img
@@ -38,7 +46,7 @@ const Navbar = () => {
                   EN{' '}
                   <IoIosArrowDown
                     className={
-                      isClicked
+                      isFlagClicked
                         ? 'm-1 -rotate-180 transition duration-500'
                         : 'm-1 rotate-0 transition duration-500'
                     }
@@ -48,7 +56,7 @@ const Navbar = () => {
             </div>
             <div
               className={
-                isClicked
+                isFlagClicked
                   ? 'absolute top-8 right-2 z-50 block w-max bg-[#EEEEEE] opacity-100 transition duration-1000'
                   : 'hidden transition-all duration-1000'
               }
@@ -199,8 +207,201 @@ const Navbar = () => {
           </div>
 
           {/* Hamburger Menu smaller than xl-screen */}
-          <GiHamburgerMenu className="text-3xl cursor-pointer xl:hidden" />
+          <GiHamburgerMenu
+            onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}
+            className="text-3xl cursor-pointer xl:hidden"
+          />
         </div>
+        {isHamburgerOpen && (
+          <div className="absolute left-0 w-full px-3 translate-y-0 bg-white h-50 top-16 md:px-8">
+            {/* features */}
+            <div className="flex items-center justify-between">
+              <Link href="/" passHref>
+                <a className="uppercase">features</a>
+              </Link>
+              <div
+                onClick={() => setIsFeatureClicked(!isFeatureClicked)}
+                className="flex items-center justify-center w-10 h-10 cursor-pointer"
+              >
+                <IoIosArrowDown
+                  className={
+                    isFeatureClicked
+                      ? '-rotate-180 text-lg transition duration-500'
+                      : 'rotate-0 text-lg transition duration-500'
+                  }
+                />
+              </div>
+            </div>
+            {isFeatureClicked && (
+              <div className="grid w-full grid-cols-2 gap-2 px-3 py-2 uppercase bg-gray-100">
+                {featuresData.map((data) => (
+                  <Link key={data.name} href={data.path} passHref>
+                    <a className="font-serif font-light transition text-md hover:opacity-50">
+                      {data.name}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {/* for tax consultantts  */}
+            <div className="py-2">
+              <Link href="/" passHref>
+                <a className="uppercase">for tax consultants</a>
+              </Link>
+            </div>
+            {/* for marketplaces  */}
+            <div className="py-2">
+              <Link href="/" passHref>
+                <a className="uppercase">for marketplaces</a>
+              </Link>
+            </div>
+
+            {/* interfaces */}
+            <div className="flex items-center justify-between transition duration-300 group">
+              <Link href="/features" passHref>
+                <a className="uppercase">interfaces</a>
+              </Link>
+              <div
+                onClick={() => setIsInterfacesClicked(!isInterfacesClicked)}
+                className="flex items-center justify-center w-10 h-10 cursor-pointer"
+              >
+                <IoIosArrowDown
+                  className={
+                    isInterfacesClicked
+                      ? '-rotate-180 text-lg transition duration-500'
+                      : 'rotate-0 text-lg transition duration-500'
+                  }
+                />
+              </div>
+            </div>
+
+            {isInterfacesClicked && (
+              <div className="grid w-full grid-cols-2 gap-2 px-3 py-2 uppercase bg-gray-100">
+                {interfacesData.map((data) => (
+                  <Link key={data.name} href={data.path} passHref>
+                    <a className="font-serif font-light transition text-md hover:opacity-50">
+                      {data.name}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {/* topics  */}
+            <div className="py-2">
+              <Link href="/" passHref>
+                <a className="uppercase">topics</a>
+              </Link>
+            </div>
+
+            {/* api  */}
+            <div className="py-2">
+              <Link href="/" passHref>
+                <a className="uppercase">api</a>
+              </Link>
+            </div>
+            {/* home  */}
+            <div className="py-2">
+              <Link href="/" passHref>
+                <a className="uppercase">home</a>
+              </Link>
+            </div>
+            {/* taxdoo blog  */}
+            <div className="py-2">
+              <Link href="/" passHref>
+                <a className="uppercase">taxdoo blog</a>
+              </Link>
+            </div>
+            {/* jobs  */}
+            <div className="py-2">
+              <Link href="/" passHref>
+                <a className="uppercase">jobs</a>
+              </Link>
+            </div>
+            {/* contact  */}
+            <div className="py-2">
+              <Link href="/" passHref>
+                <a className="uppercase">contact</a>
+              </Link>
+            </div>
+            {/* price  */}
+            <div className="py-2">
+              <Link href="/" passHref>
+                <a className="uppercase">price</a>
+              </Link>
+            </div>
+            {/* Language Choices */}
+            <div
+              className="flex py-2 mb-2"
+              onClick={() =>
+                setIsMobileLanguageClicked(!isMobileLanguageClicked)
+              }
+            >
+              <Link href="/" locale="en" passHref>
+                <a className="flex items-center">
+                  <img
+                    className="w-5 h-5 m-1"
+                    src="/assets/icons/english.svg"
+                    alt="english"
+                  />
+                  EN{' '}
+                  <IoIosArrowDown
+                    className={
+                      isMobileLanguageClicked
+                        ? 'm-1 -rotate-180 transition duration-500'
+                        : 'm-1 rotate-0 transition duration-500'
+                    }
+                  />
+                </a>
+              </Link>
+            </div>
+            {isMobileLanguageClicked && (
+              <div className="-ml-2 bg-white">
+                <Link href="/" locale="de" passHref>
+                  <a className="languageMenu">
+                    <img
+                      className="w-5 h-5 m-1"
+                      src="/assets/icons/german.svg"
+                      alt="german"
+                    />
+                    <span className="">DE</span>
+                  </a>
+                </Link>
+                <Link href="/" locale="fr" passHref>
+                  <a className="languageMenu ">
+                    <img
+                      className="w-5 h-5 m-1"
+                      src="/assets/icons/french.svg"
+                      alt="french"
+                    />
+                    <span className="pr-2">FR</span>
+                  </a>
+                </Link>
+                <Link href="/" locale="it" passHref>
+                  <a className="languageMenu ">
+                    <img
+                      className="w-5 h-5 m-1"
+                      src="/assets/icons/italian.svg"
+                      alt="italian"
+                    />
+                    <span className="pr-2">IT</span>
+                  </a>
+                </Link>
+                <Link href="/" locale="es" passHref>
+                  <a className="languageMenu ">
+                    <img
+                      className="w-5 h-5 m-1"
+                      src="/assets/icons/spanish.svg"
+                      alt="spanish"
+                    />
+                    <span className="pr-2">ES</span>
+                  </a>
+                </Link>
+              </div>
+            )}
+          </div>
+        )}
       </nav>
     </div>
   )
