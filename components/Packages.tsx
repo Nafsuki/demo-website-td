@@ -4,8 +4,8 @@ import { packageData } from '../data'
 
 const Packages = () => {
   return (
-    <div className="w-full px-3 mx-auto max-w-7xl md:px-8 xl:px-0">
-      <h2 className="mb-5 text-2xl font-medium text-center md:text-3xl xl:text-4xl">
+    <div className="w-full max-w-lg px-5 mx-auto md:max-w-7xl md:px-8 xl:px-0">
+      <h2 className="mb-5 text-2xl font-bold text-center md:text-3xl xl:text-4xl">
         Choose your package
       </h2>
 

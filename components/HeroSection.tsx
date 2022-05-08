@@ -81,7 +81,7 @@ const HeroSection = ({ data }: any) => {
       </div>
       {/* retailers */}
       <div className="w-full px-3 mx-auto my-32 max-w-7xl md:px-8 lg:px-0">
-        <h2 className="text-lg font-medium text-center lg:text-2xl">
+        <h2 className="text-lg font-semibold text-center md:text-2xl">
           Some of the most successful retailers trust Taxdoo
         </h2>
         {/* retailers img */}

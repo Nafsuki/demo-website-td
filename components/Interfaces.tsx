@@ -9,11 +9,11 @@ const Interfaces = () => {
       </h2>
 
       {/* Interface Card */}
-      <div className="lg:grid lg:grid-cols-3 lg:gap-10">
+      <div className="md:grid md:grid-cols-3 md:gap-5 lg:gap-10">
         {interfaceLogos.map((data) => (
           <div
             key={data.name}
-            className="w-4/5 h-24 mx-auto my-8 transition duration-500 bg-white cursor-pointer drop-shadow-2xl hover:scale-110 lg:m-0 lg:w-full"
+            className="w-4/5 h-24 mx-auto my-8 transition duration-500 bg-white cursor-pointer drop-shadow-2xl hover:scale-110 md:m-0 md:w-full"
           >
             <Link href={data.path} passHref>
               <div className="flex items-center justify-center w-full h-full">
