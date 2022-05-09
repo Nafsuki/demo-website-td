@@ -14,6 +14,7 @@ export async function getServerSideProps() {
 }
 
 const HeroSection = ({ data }: any) => {
+  console.log('data', data)
   return (
     <div className="w-full px-3 mx-auto max-w-7xl md:px-8 xl:px-0">
       {/* Empty div to keep the distance from the top not to be hidden by the navbar */}
