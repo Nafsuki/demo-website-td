@@ -10,7 +10,7 @@ This demo website is coded using Next.js, TypeScript & TailwindCSS based on the 
 ⚡️ Hover & Click Transition/Animation for buttons & Navbars
 ⚡️ Valid Next.js
 
-To view the demo: **[click here](https://natsukiyamaguchi.com/)**
+To view the demo: **[click here](https://demo-website-td.vercel.app/)**
 
 ## Technologies
 
