@@ -82,9 +82,10 @@ const Slider = () => {
   }
   return (
     <div className="relative w-full overflow-hidden bg-[#F6F6F6] px-3 py-20 sm:px-10">
-      <div className="flex overflow-x-scroll">
+      {/* Test slider working on animation */}
+      {/* <div className="flex overflow-x-scroll">
         <div
-          className={`h-40 w-full shrink-0 translate-x-0 border bg-pink-400 ${
+          className={`h-40 w-full shrink-0 translate-x-0  bg-pink-400 ${
             transitionL
               ? '-translate-x-full transform transition duration-300 ease-linear'
               : 'animate-slideToRight'
@@ -101,9 +102,10 @@ const Slider = () => {
         >
           {testimonialsData[nextIndex].name}
         </div>
-      </div>
+      </div> */}
+
       {/* Slider */}
-      <div className="mx-auto flex h-[900px] w-full max-w-7xl flex-col border-4 md:h-[500px] md:flex-row-reverse">
+      <div className="mx-auto flex h-[900px] w-full max-w-7xl flex-col md:h-[500px] md:flex-row-reverse">
         {/* Arrow to Previous Slider */}
         <div
           onClick={slideToLeft}
@@ -120,7 +122,7 @@ const Slider = () => {
           <MdOutlineArrowForwardIos className="text-3xl sm:text-4xl" />
         </div>
         {/* Image Section */}
-        <div className="p-3 bg-pink-100 md:flex-1">
+        <div className="p-3 md:flex-1">
           {/* <img src="" alt="image" /> */}
           <div className="w-full">
             <img
@@ -129,11 +131,11 @@ const Slider = () => {
               alt="image"
             />
           </div>
-          <div className="my-3 border">
-            <h6 className="font-black border text-md">
+          <div className="my-3">
+            <h6 className="font-black text-md">
               {testimonialsData[activeIndex].name}
             </h6>
-            <p className="font-serif text-lg font-light border">
+            <p className="font-serif text-lg font-light">
               operates the onlineshop{' '}
               <a
                 className="underline transition-opacity cursor-pointer hover:opacity-50"
@@ -145,8 +147,8 @@ const Slider = () => {
           </div>
         </div>
         {/* Text Section */}
-        <div className="border sm:my-16 md:my-0 md:flex-1">
-          <h3 className="my-2 text-xl font-black text-center border sm:my-5 md:text-left">
+        <div className=" sm:my-16 md:my-0 md:flex-1">
+          <h3 className="my-2 text-xl font-black text-center sm:my-5 md:text-left">
             {testimonialsData[activeIndex].name}
           </h3>
           <p className="h-full font-serif text-lg font-light text-center sm:text-xl md:h-auto md:text-left">

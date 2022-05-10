@@ -135,10 +135,10 @@ const Footer = () => {
         </div>
 
         {/* Newsletter */}
-        <div className="flex flex-col w-full border">
+        <div className="flex flex-col w-full max-w-lg xl:self-start">
           <h3 className="font-black uppercase">Newsletter</h3>
-          <form className="flex flex-col border">
-            <label className="mt-5 text-left border">
+          <form className="flex flex-col">
+            <label className="mt-5 text-left">
               Email<span className="text-red-700">*</span>
             </label>
             <input
@@ -146,7 +146,7 @@ const Footer = () => {
               name="email"
               className="h-10 bg-blue-100 border border-blue-300 rounded-lg"
             />
-            <label className="mt-5 text-left border">
+            <label className="mt-5 text-left">
               Are you an online merchant or tax consultant?
             </label>
             <input
