@@ -7,7 +7,7 @@ This demo website is coded using Next.js, TypeScript & TailwindCSS based on the 
 
 ⚡️ Styled with TailwindCSS\
 ⚡️ Fully Responsive (Mobile First)\
-⚡️ Hover & Click Transition/Animation for buttons & Navbars
+⚡️ Hover & Click Transition/Animation for buttons & Navbars\
 ⚡️ Valid Next.js
 
 To view the demo: **[click here](https://demo-website-td.vercel.app/)**
