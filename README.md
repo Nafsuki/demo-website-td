@@ -11,3 +11,11 @@ This demo website is coded using Next.js, TypeScript & TailwindCSS based on the 
 ⚡️ Valid Next.js
 
 To view the demo: **[click here](https://natsukiyamaguchi.com/)**
+
+## Technologies
+
+Project is created with:
+* Next.js: latest
+* React.js: 17.0.2
+* TailwindCSS: 3.0.7
+* TypeScript: 4.5.4
