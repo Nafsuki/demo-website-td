@@ -21,4 +21,4 @@ Project is created with:
 * TypeScript: 4.5.4
 
 
-<img src="https://github.com/Nafsuki/demo-website-td/blob/main/public/assets/readme.png" />
+<img src="https://github.com/Nafsuki/demo-website-td/blob/main/readme.png" />
